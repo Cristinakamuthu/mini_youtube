@@ -1,0 +1,15 @@
+
+
+
+
+
+const routes = [
+    path : "/"
+    element
+
+
+ 
+    
+
+
+]
