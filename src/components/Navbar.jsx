@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo">🎵 Catholic Music</h2>
+      <h2 className="logo">Catholic Music</h2>
       <ul className="nav-links">
         <li><NavLink to="/" end className="nav-link">Home</NavLink></li>
         <li><NavLink to="/masssongs" className="nav-link">Mass</NavLink></li>
