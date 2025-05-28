@@ -1,8 +1,12 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 
 const LentenPage = () => {
   return (
-    <div>LentenPage</div>
+    <div>
+    <Navbar />
+    </div>
   )
 }
 

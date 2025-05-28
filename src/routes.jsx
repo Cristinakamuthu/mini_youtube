@@ -70,3 +70,5 @@ const routes = [
     errorElement: <Errorpage />,
   },
 ];
+
+export default routes;

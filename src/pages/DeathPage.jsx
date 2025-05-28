@@ -2,12 +2,12 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
-const MarianPage = () => {
+const DeathPage = () => {
   return (
     <div>
-        <Navbar />
+    <Navbar />
     </div>
   )
 }
 
-export default MarianPage
+export default DeathPage
