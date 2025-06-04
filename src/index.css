@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Sidebar Navbar */
 .navbar {
   width: 220px;
   height: 100vh;
-  background-color: #003152; 
+  background-color: #003152;
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -22,6 +24,7 @@
   font-optical-sizing: auto;
 }
 
+/* Sidebar Links */
 .nav-links {
   list-style: none;
   padding: 0;
@@ -34,19 +37,15 @@
   text-decoration: none;
   color: white;
   padding: 12px 16px;
-  margin-bottom: 14px; 
+  margin-bottom: 8px;
   border-radius: 8px;
   transition: background-color 0.2s ease;
   display: block;
-  /* text-align: center; */
+  text-align: center;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-size: 25px;
-  
+  font-size: 23px;
 }
-
 
 .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.15);
@@ -54,13 +53,13 @@
 
 .nav-link.active {
   background-color: white;
-  color: #007BFF;
+  color: #003152;
   font-weight: bold;
 }
 
+/* Dropdown Styling */
 .dropdown {
   position: relative;
-  
 }
 
 .dropdown-content {
@@ -69,7 +68,6 @@
   margin-top: 8px;
   margin-left: 20px;
   padding-left: 10px;
-  
 }
 
 .dropdown:hover .dropdown-content {
@@ -80,4 +78,76 @@
   margin-bottom: 10px;
   padding-left: 24px;
   font-size: 0.95rem;
+}
+
+/* Title Header fixed on top */
+.title-header {
+  position: fixed;
+  top: 0;
+  left: 220px; 
+  right: 0;
+  height: 30px; 
+  line-height: 30px;
+  background-color: white;
+  color: #003152;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  text-align: center;
+  user-select: none;
+}
+
+
+.mass-navbar {
+  position: fixed;
+  top: 60px; 
+  left: 220px;
+  right: 0;
+  height: 80px;
+  background-color: #003152;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.mass-nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 150px; 
+  margin: 0;
+}
+
+.mass-nav-list li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s ease;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  
+}
+
+.mass-nav-list li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.mass-nav-list.active {
+  background-color: white;
+  color: #003152;
+  font-weight: bold;
+}
+
+.main-content {
+  margin-left: 220px; 
+  margin-top: 120px; 
+  padding: 1rem 2rem;
 }

@@ -10,6 +10,16 @@ import OccasionsPage from "./pages/OccasionsPage";
 import PraisePage from "./pages/PraisePage";
 import BaptismPage from "./pages/BaptismPage";
 import DeathPage from "./pages/DeathPage";
+import EntrancePage from "./pages/EntrancePage";
+import MassPage from "./pages/MassPage";
+import Exit from "./pages/Exit";
+import Offetory from "./pages/Offetory";
+import  Communion from "./pages/Communion";
+import LambofGod from "./pages/LambofGod";
+import Thankgiving from "./pages/Thanksgiving";
+
+
+
 
 const routes = [
   {
@@ -26,7 +36,45 @@ const routes = [
     path: "/masssongs",
     element: <Mass />,
     errorElement: <Errorpage />,
+    children:[
+      {
+        path: "Entrance",
+        element: <EntrancePage />,
+        errorElement: <Errorpage />,
+      },
+      {
+        path: "Mass",
+        element: <MassPage />,
+        errorElement: <Errorpage />,
+      },
+      {
+        path: "Offetory",
+        element: <Offetory />,
+        errorElement: <Errorpage />,
+      },
+      {
+        path: "Communion",
+        element: <Communion />,
+        errorElement: <Errorpage />,
+      },
+      {
+        path: "LambofGod",
+        element: <LambofGod />,
+        errorElement: <Errorpage />,
+      },
+      {
+        path: "Exit",
+        element: <Exit />,
+        errorElement: <Errorpage />,
+      },
+      {
+        path: "Thanksgiving",
+        element: <Thankgiving />,
+        errorElement: <Errorpage />,
+      },
+    ],
   },
+
   {
     path: "/lentensongs",
     element: <LentenPage />,

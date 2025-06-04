@@ -1,11 +1,21 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import Navbar2 from '../components/Navbar2'
+import Title from '../components/Title'
 
 const Mass = () => {
   return (
     <div>
-       <Navbar />
+      <div>
+        <Title />
+      </div>
+      <Navbar />
+      <Navbar2 />
+      <div className="main-content">
+  <Outlet />
+</div>
+
     </div>
   )
 }

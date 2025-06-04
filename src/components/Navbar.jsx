@@ -15,10 +15,10 @@ export default function Navbar() {
         <li><NavLink to="/HolySpiritsongs" className="nav-link">Holy Spirit</NavLink></li>
         <li className="dropdown">
           <span className="nav-link">Occasions </span>
-          <ul className="dropdown-content">
+          <ol className="dropdown-content">
             <li><NavLink to="/Occasions/baptism" className="nav-link">Baptism</NavLink></li>
             <li><NavLink to="/Occasions/death" className="nav-link">Death</NavLink></li>
-          </ul>
+          </ol>
         </li>
         <li><NavLink to="/Praise" className="nav-link">Praise</NavLink></li>
       </ul>
