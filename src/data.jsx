@@ -24,7 +24,7 @@ export const songs = [
       description: 'A somber melody to guide your Lenten meditation.',
       image: 'https://img.youtube.com/vi/3H5KwBSt3uk/0.jpg',
       hook: '“He bore our griefs…” ✝️',
-      category: 'Entrance',
+      category: 'Lent',
     },
     {
       id:4 ,
