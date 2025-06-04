@@ -1,0 +1,48 @@
+export const songs = [
+    {
+      id: 1,
+      title: 'Tumshangilie Maria',
+      youtubeId: 'pHVkIUIHmKw',
+      description: 'To our dear Lady.',
+      image: 'https://img.youtube.com/vi/pHVkIUIHmKw/0.jpg',
+      hook: '“Hail Mary, full of grace…” 🌹',
+      category: 'Marian',
+    },
+    {
+      id: 2,
+      title: 'Shangwe za Noeli',
+      youtubeId: 'IXkMZV9XxoA',
+      description: 'Celebrate the birth of our Savior with reverence and joy.',
+      image: 'https://img.youtube.com/vi/IXkMZV9XxoA/0.jpg',
+      hook: '“Unto us a child is born!” 🎄',
+      category: 'Christmas',
+    },
+    {
+      id: 3,
+      title: 'Mfariji wa Kweli',
+      youtubeId: '3H5KwBSt3uk',
+      description: 'A somber melody to guide your Lenten meditation.',
+      image: 'https://img.youtube.com/vi/3H5KwBSt3uk/0.jpg',
+      hook: '“He bore our griefs…” ✝️',
+      category: 'Entrance',
+    },
+    {
+      id:4 ,
+      title: 'Kumbuka Bwana',
+      youtubeId: 'doxc123456',
+      description: 'A joyful entrance hymn to welcome the congregation.',
+      image: 'https://img.youtube.com/vi/doxc123456/0.jpg',
+      hook: '“Come, let us worship the Lord!” 🙌',
+      category: 'Entrance',
+    },
+    {
+      id:5 ,
+      title: 'Tuanze Ibada',
+      youtubeId: 'doxc789101',
+      description: 'An inspiring song to start the Mass with praise.',
+      image: 'https://img.youtube.com/vi/doxc789101/0.jpg', 
+      hook: '“Let us lift our hearts in prayer.” 🕊️',
+      category: 'Entrance',
+    },
+  ];
+  

@@ -8,8 +8,9 @@ function Navbar2() {
         <li><NavLink to="Offertory">Offertory</NavLink></li>
         <li><NavLink to="Communion">Communion</NavLink></li>
         <li><NavLink to="LambOfGod">Lamb of God</NavLink></li>
-        <li><NavLink to="Exit">Exit</NavLink></li>
         <li><NavLink to="Thanksgiving">Thanksgiving</NavLink></li>
+        <li><NavLink to="Exit">Exit</NavLink></li>
+       
       </ul>
     </nav>
   );
