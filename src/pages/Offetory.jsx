@@ -2,7 +2,7 @@ import React from 'react'
 import { songs } from '../data'
 
 const Offetory = () => {
-  const offetorysongs= songs.filter(song => song.category === 'Offetory');
+  const offetorysongs= songs.filter(song => song.category === 'Offertory');
     return (
       <div>
         
