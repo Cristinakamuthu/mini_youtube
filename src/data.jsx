@@ -224,4 +224,14 @@ export const songs = [
     hook: '“Our God reigns forever!” 🔊',
     category: 'Praise',
   },
+  {
+    id: 23,
+    title: 'Kristo Amefufuka',
+    youtubeId: 'easter123456',
+    description: 'A joyful celebration of the resurrection of Christ.',
+    image: 'https://img.youtube.com/vi/easter123456/0.jpg',
+    hook: '“He is risen, alleluia!” ✨',
+    category: 'Easter',
+  }
+  
 ];
