@@ -1,5 +1,6 @@
 import React from 'react';
 import { songs } from '../data';
+
 const EntrancePage = () => {
   const entranceSongs = songs.filter(song => song.category === 'Entrance');
 
