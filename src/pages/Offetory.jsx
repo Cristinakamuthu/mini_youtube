@@ -7,7 +7,7 @@ const Offetory = () => {
       <div>
         
             <div className="entrance-page">
-              <h1>Offetory Songs </h1>
+              <h1>Offertory Songs </h1>
               <div className="songs-container">
                 {offetorysongs.map(({ id, title, youtubeId, description, hook }) => (
                   <div key={id} className="song-row">
