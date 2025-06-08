@@ -1,13 +1,39 @@
-import React from 'react'
-import { songs } from '../data'
+import React, { useState } from 'react';
+import { songs } from '../data';
+import { FaSearch } from 'react-icons/fa';
+
 
 const MassPage = () => {
- const masssongs= songs.filter(song => song.category === 'Mass');
+   const [searchTerm, setSearchTerm] = useState('');
+    const [inputValue, setInputValue] = useState ('');
+  
+    const searchbutton = () => {
+      setSearchTerm(inputValue);
+    }
+  
+ const masssongs= songs.filter(song => song.category === 'Mass'&&
+      song.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+ 
    return (
      <div>
        
            <div className="entrance-page">
              <h1>Mass Songs </h1>
+<div className='buttonplace'>
+    <input
+      type="text"
+      placeholder="Search for a song..."
+      value={inputValue}
+      onChange={(e) => setInputValue(e.target.value)}
+      className='buttion'
+    />
+    <button onClick={searchbutton} className='searchh'>
+      <FaSearch />
+    </button>
+    
+  </div>
              <div className="songs-container">
                {masssongs.map(({ id, title, youtubeId, description, hook }) => (
                  <div key={id} className="song-row">

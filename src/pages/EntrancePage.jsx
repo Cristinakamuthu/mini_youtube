@@ -1,12 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { songs } from '../data';
+import { FaSearch } from 'react-icons/fa';
+
 
 const EntrancePage = () => {
-  const entranceSongs = songs.filter(song => song.category === 'Entrance');
+  const [searchTerm, setSearchTerm] = useState('');
+    const [inputValue, setInputValue] = useState ('');
+
+    const searchbutton = () => {
+    setSearchTerm(inputValue);
+  }
+
+  
+  const entranceSongs = songs.filter(song => song.category === 'Entrance' &&
+      song.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
 
   return (
     <div className="entrance-page">
       <h1>Entrance Songs</h1>
+<div className='buttonplace'>
+          <input
+            type="text"
+            placeholder="Search for a song..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className='buttion'
+          />
+          <button onClick={searchbutton} className='searchh'>
+            <FaSearch />
+          </button>
+          
+        </div>
       <div className="songs-container">
         {entranceSongs.map(({ id, title, youtubeId, description, hook }) => (
           <div key={id} className="song-row">

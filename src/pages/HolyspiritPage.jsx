@@ -14,7 +14,7 @@ const HolyspiritPage = () => {
       song.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  
+
   return (
     <div>
       <Navbar />
@@ -26,6 +26,7 @@ const HolyspiritPage = () => {
                         placeholder="Search for a song..."
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
+
                         className='buttion'
                       />
                       <button onClick={searchbutton} className='searchh'>

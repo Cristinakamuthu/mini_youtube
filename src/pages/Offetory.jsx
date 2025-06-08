@@ -1,8 +1,18 @@
-import React from 'react'
-import { songs } from '../data'
+import React, { useState } from 'react';
+import { songs } from '../data';
+import { FaSearch } from 'react-icons/fa';
 
 const Offetory = () => {
-  const offetorysongs= songs.filter(song => song.category === 'Offertory');
+  const [searchTerm, setSearchTerm] = useState('');
+    const [inputValue, setInputValue] = useState ('');
+  
+    const searchbutton = () => {
+      setSearchTerm(inputValue);
+    }
+  const offetorysongs= songs.filter(song => song.category === 'Offertory' &&
+      song.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
     return (
       <div>
         

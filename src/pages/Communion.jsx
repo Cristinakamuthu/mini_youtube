@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { songs } from '../data';
 import { FaSearch } from 'react-icons/fa';
 
-// revist search funcytion **
+
 const Communion = () => {
   const [searchTerm,setSearchTerm] = useState("");
   const[inputValue,setInputValue] = useState("");
