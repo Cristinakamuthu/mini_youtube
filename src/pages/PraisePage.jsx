@@ -1,9 +1,20 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import { songs } from '../data'
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
+import { songs } from '../data';
+import { FaSearch } from 'react-icons/fa';
 
 const PraisePage = () => {
-  const praisesongs= songs.filter(song => song.category === 'Praise');
+  const [searchTerm, setSearchTerm] = useState('');
+      const [inputValue, setInputValue] = useState ('');
+    
+      const searchbutton = () => {
+        setSearchTerm(inputValue);
+      }
+  const praisesongs= songs.filter(song => song.category === 'Praise' &&
+        song.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  
+  
     return (
       <div>
         <Navbar />
@@ -11,6 +22,19 @@ const PraisePage = () => {
         
             <div className="entrance-page">
               <h1>Worship Songs </h1>
+        <div className='buttonplace'>
+                <input
+                  type="text"
+                  placeholder="Search for a song..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  className='buttion'
+                />
+                <button onClick={searchbutton} className='searchh'>
+                  <FaSearch />
+                </button>
+                
+              </div>
               <div className="songs-container">
                 {praisesongs.map(({ id, title, youtubeId, description, hook }) => (
                   <div key={id} className="song-row">

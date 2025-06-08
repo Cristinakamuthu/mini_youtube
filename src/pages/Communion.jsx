@@ -1,14 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { songs } from '../data';
+import { FaSearch } from 'react-icons/fa';
 
+// revist search funcytion **
 const Communion = () => {
-  const communionsongs= songs.filter(song => song.category === 'Communion');
+  const [searchTerm,setSearchTerm] = useState("");
+  const[inputValue,setInputValue] = useState("");
+
+  const searchbutton = () => {
+      setSearchTerm(inputValue);
+    }
+
+  const communionsongs= songs.filter(song => song.category === 'Communion' && song.title.toLowerCase().includes(searchTerm.toLowerCase()));
   return (
     <div>
       
           <div className="entrance-page">
             <h1>Communion Songs </h1>
-            <div className="songs-container">
+            <div className='buttonplace'>
+          <input
+            type="text"
+            placeholder="Search for a song..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className='buttion'
+          />
+          <button onClick={searchbutton} className='searchh'>
+            <FaSearch />
+          </button>
+          
+        </div>
+<div className="songs-container">
               {communionsongs.map(({ id, title, youtubeId, description, hook }) => (
                 <div key={id} className="song-row">
                   <div className="video-wrapper">

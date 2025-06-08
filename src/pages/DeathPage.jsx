@@ -1,15 +1,41 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+
 import Navbar from '../components/Navbar'
 import { songs } from '../data'
+import { FaSearch } from 'react-icons/fa'
+import React, { useState } from 'react';
+
 
 const DeathPage = () => {
-  const deathsongs = songs.filter(song => song.category === 'Death');
+  const [searchTerm, setSearchTerm] = useState('');
+      const [inputValue, setInputValue] = useState ('');
+
+    const searchbutton = () => {
+      setSearchTerm(inputValue);
+    }
+  
+  
+
+  const deathsongs = songs.filter(song => song.category === 'Death' &&
+        song.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   return (
     <div>
       <Navbar />
           <div className="entrance-page">
             <h1>Funeral Songs </h1>
+<div className='buttonplace'>
+        <input
+          type="text"
+          placeholder="Search for a song..."
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          className='buttion'
+        />
+        <button onClick={searchbutton} className='searchh'>
+          <FaSearch />
+        </button>
+        
+      </div>
             <div className="songs-container">
               {deathsongs.map(({ id, title, youtubeId, description, hook }) => (
                 <div key={id} className="song-row">
