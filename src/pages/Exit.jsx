@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { songs } from '../data';
 import { FaSearch } from 'react-icons/fa';
+import Navbar from '../components/Navbar';
 
 
 const Exit = () => {

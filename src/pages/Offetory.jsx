@@ -18,6 +18,19 @@ const Offetory = () => {
         
             <div className="entrance-page">
               <h1>Offertory Songs </h1>
+<div className='buttonplace'>
+          <input
+            type="text"
+            placeholder="Search for a song..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className='buttion'
+          />
+          <button onClick={searchbutton} onclassName='searchh'>
+            <FaSearch />
+          </button>
+          
+        </div>
               <div className="songs-container">
                 {offetorysongs.map(({ id, title, youtubeId, description, hook }) => (
                   <div key={id} className="song-row">

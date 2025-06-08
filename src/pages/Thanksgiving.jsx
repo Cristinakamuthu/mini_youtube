@@ -1,8 +1,8 @@
-import React from 'react'
 import { songs } from '../data'
 import Navbar from '../components/Navbar';
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+
 const Thanksgiving = () => {
   const [searchTerm, setSearchTerm] = useState('');
     const [inputValue, setInputValue] = useState ('');
