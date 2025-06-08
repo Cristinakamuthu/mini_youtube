@@ -5,11 +5,12 @@ function Navbar2() {
     <nav className="mass-navbar">
       <ul className="mass-nav-list">
         <li><NavLink to="Entrance">Entrance</NavLink></li>
-        <li><NavLink to="Offertory">Offertory</NavLink></li>
+        <li><NavLink to="Offetory">Offertory</NavLink></li>
         <li><NavLink to="Communion">Communion</NavLink></li>
         <li><NavLink to="LambOfGod">Lamb of God</NavLink></li>
-        <li><NavLink to="Exit">Exit</NavLink></li>
         <li><NavLink to="Thanksgiving">Thanksgiving</NavLink></li>
+        <li><NavLink to="Exit">Exit</NavLink></li>
+       
       </ul>
     </nav>
   );

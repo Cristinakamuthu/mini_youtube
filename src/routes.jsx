@@ -63,15 +63,16 @@ const routes = [
         errorElement: <Errorpage />,
       },
       {
-        path: "Exit",
-        element: <Exit />,
-        errorElement: <Errorpage />,
-      },
-      {
         path: "Thanksgiving",
         element: <Thankgiving />,
         errorElement: <Errorpage />,
       },
+      {
+        path: "Exit",
+        element: <Exit />,
+        errorElement: <Errorpage />,
+      },
+      
     ],
   },
 
